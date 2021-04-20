@@ -1,8 +1,12 @@
 :root {
-  --darkgray: hsl(0, 0%, 63%);
+  --lightGray: hsl(0, 0%, 63%);
   --bg: hsl(0, 0%, 0%);
   --fg: hsl(0, 0%, 100%);
-  --darkgray: hsl(0, 0%, 27%);
+  --darkGray: hsl(0, 0%, 27%);
+  --flow-space: 1.75rem;
+  --flow-mid: 3.5rem;
+  --flow-large: 5rem;
+  --flow-massive: 10rem;
 }
 html,
 body {
@@ -61,8 +65,8 @@ h6 {
   margin: 0;
 }
 
-.slide-btn {
-  background: var(--bg);
+main {
+  max-height: 100vh;
 }
 
 nav {
@@ -70,6 +74,7 @@ nav {
   display: flex;
   align-items: flex-end;
   margin-left: 20px;
+  margin: 2rem 2rem;
 }
 .nav-link {
   padding-right: 10px;
@@ -77,5 +82,71 @@ nav {
   color: var(--fg);
 }
 .title {
-  line-height: 1.2;
+  line-height: 1.22;
+  padding-right: 25px;
+  color: var(--fg);
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+.hero-wrapper {
+  display: flex;
+}
+.hero-wrapper img {
+  align-self: stretch;
+  max-height: 450px;
+  height: 100%;
+  align-self: stretch;
+}
+
+.hero-text {
+  display: grid;
+  grid-template-rows: 10px 4fr auto;
+}
+
+.about-wrapper {
+  display: flex;
+}
+
+.hero-text-wrapper {
+  padding: 0 var(--flow-large) 0 var(--flow-large);
+}
+.hero-text-wrapper p {
+  color: var(--lightGray);
+  font-size: 12px;
+  padding-bottom: var(--flow-space);
+}
+.hero-title {
+  font-size: 35px;
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.slide-btn {
+  background: var(--bg);
+  text-decoration: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 70px;
+  height: 70px;
+}
+.shop-now {
+  text-decoration: none;
+  color: var(--bg);
+  letter-spacing: 0.5rem;
+  font-size: 14px;
+}
+
+.about-section {
+  padding: 3rem 3rem;
+}
+.about-section h3 {
+  font-size: 16px;
+}
+.about-section p {
+  color: var(--lightGray);
+  font-size: 12px;
+  padding-bottom: var(--flow-space);
 }
